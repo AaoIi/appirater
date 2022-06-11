@@ -687,7 +687,12 @@ static BOOL _alwaysUseMainBundle = NO;
 	
     // Use the built SKStoreReviewController if available (available from iOS 14.3 upwards)
     if (NSStringFromClass([SKStoreReviewController class]) != nil) {
-        [SKStoreReviewController requestReviewInScene:[Appirater keyWindow].windowScene];
+        if (@available(iOS 14.0, *)) {
+            [SKStoreReviewController requestReviewInScene:[Appirater keyWindow].windowScene];
+        } else {
+            // Fallback on earlier versions
+            [SKStoreReviewController requestReview];
+        }
         return;
     }
 

@@ -2,7 +2,7 @@
   "name": "Appirater",
   "version": "2.3.2",
   "platforms": {
-    "ios": "14.0"
+    "ios": "11.0"
   },
   "summary": "A utility that reminds your iPhone app's users to review the app.",
   "homepage": "https://arashpayan.com/blog/2009/09/07/presenting-appirater/",
